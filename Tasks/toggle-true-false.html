@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toggle Image</title>
+</head>
+<body>
+  <button onclick="toggleImage()">Change Image</button>
+  <img id="myImage" src="image1.jpg" alt="Image 1">
+  
+  <script>
+    var isImage1 = true; // Initially, set the variable to true for the first image
+
+    function toggleImage() {
+      var image = document.getElementById('myImage');
+      if (isImage1) {
+        image.src = 'image2.jpg'; // Change the image source to the second image
+      } else {
+        image.src = 'image1.jpg'; // Change the image source back to the first image
+      }
+      isImage1 = !isImage1; // Toggle the variable value
+    }
+  </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Image</title>
+</head>
+<body>
+  <button onclick="changeImage()">Change Image</button>
+  <img id="myImage" src="image1.jpg" alt="Image 1">
+  
+  <script>
+    var images = ['image1.jpg', 'image2.jpg']; // Array to store image sources
+    var currentIndex = 0; // Index of the current image
+
+    function changeImage() {
+      var image = document.getElementById('myImage');
+      currentIndex = (currentIndex + 1) % images.length; // Increment index and loop back to 0 if needed
+      image.src = images[currentIndex]; // Set the image source to the next image
+    }
+  </script>
+</body>
+</html>

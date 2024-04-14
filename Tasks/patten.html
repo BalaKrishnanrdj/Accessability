@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1 id="demo"></h1>
+<body>
+    <script>
+       let demo=document.querySelector("#demo")
+        var n=5; 
+        var w=1;   
+            for(let i=1;i<=n;i++){
+                for(let j=i;j<=n;j++){
+                    demo.innerHTML+="&nbsp&nbsp";
+                }
+                for(let k=i;k>1;k--){
+                    demo.innerHTML+=k;
+                }
+                for(let j=1;j<=i;j++){
+                    demo.innerHTML+=j;
+                }
+                w++;
+                demo.innerHTML +="<br>"
+            }
+    </script>
+</body>
+</html>

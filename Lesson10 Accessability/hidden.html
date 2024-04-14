@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toggle Hidden Attribute</title>
+<style>
+  .hidden{
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+  <div id="container" aria-hidden="true" class="hidden hello">
+  <h2>Hidden Container</h2>
+  <p>This container has the hidden attribute.</p>
+</div>
+
+<button id="toggleButton">Toggle Visibility</button>
+<script>
+
+const container = document.getElementById('container');
+const toggleButton = document.getElementById('toggleButton');
+
+toggleButton.addEventListener('click', function() {
+  // container.hidden = !container.hidden;
+  container.classList.toggle('hidden');
+});
+</script>
+
+</body>
+</html>

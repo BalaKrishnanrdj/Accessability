@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a ></a>
+    <section></section>
+
+    <script>
+        const link = document.querySelector("a");
+        link.textContent = "Mozilla Developer Network";
+        link.href = "https://developer.mozilla.org";
+        link.style.background="yellow";
+        link.style.border="3px solid black"
+        link.style.padding="20px 10px"
+
+
+        const sect = document.querySelector("section");
+        const para = document.createElement("p");
+        para.textContent = "We hope you enjoyed the ride.";
+        sect.appendChild(para);
+        //sect.removeChild(Para);
+        //Para.parentNode.removeChild(Para);
+        //Para.remove();
+        para.style.color = "red";
+        para.style.backgroundColor = "black";
+        para.style.textAlign = "center";
+
+        
+        let h1=document.createElement("h1");
+        h1.textContent="Balakrishnan"
+        h1.setAttribute("class","highlight")
+        const highli=document.querySelector(".highlight")
+        h1.style.backgroundColor="yellow"
+        h1.style.display="inline-block"
+        sect.appendChild(h1)
+        const text = document.createTextNode("student");
+        h1.append("\n",text)
+
+    </script>
+</body>
+</html>

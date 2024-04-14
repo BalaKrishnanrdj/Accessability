@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio value</title>
+    <!-- var name = document.forms["myForm"]["name"].value;
+    var email = document.forms["myForm"]["email"].value; -->
+
+</head>
+<body>
+    <form id="myForm">
+        <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other<br>
+        <input type="text" name="name">
+        <button type="button" onclick="getRadioValue()">Get Value</button> 
+      </form>
+      <h1 style="font-variant: small-caps;" id="result"></h1>
+      <h1 style="font-variant: small-caps;" id="results"></h1>
+      <script>
+        function getRadioValue() {
+        // Get the form element by its ID
+        var form = document.getElementById('myForm');
+        var result = document.getElementById("result");
+        var name = document.getElementById("results")
+        
+        // Get the value of the selected radio button directly from the form
+        var selectedValue = form.gender.value;
+        var selectedValues = form.name.value;
+
+        if (!selectedValue) {
+        // Prevent the form from being submitted
+        event.preventDefault();
+        
+        // Display an error message or handle it accordingly
+        alert("Please select a gender.");
+        }
+        result.textContent = selectedValue;
+        name.textContent = selectedValues;
+        }
+
+      </script>
+</body>
+</html>

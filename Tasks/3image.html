@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <style>
+    .image-container {
+      text-align: center;
+      border: 2px solid grey;
+      width: fit-content;
+      margin: auto;
+      text-align: center;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="image-container">
+    <img src="/image/bigin1.png" alt="Image 1" id="mainImage" width="200px" height="150px" >
+  </div>
+  <div class="buttons">
+    <button onclick="changeImage('/image/bigin1.png')">Image 1</button>
+    <button onclick="changeImage('/image/book1.jpeg')">Image 2</button>
+    <button onclick="changeImage('/image/bigin3.png')">Image 3</button>
+  </div>
+  <script>
+    function changeImage(imageSrc) {
+      document.getElementById('mainImage').src = imageSrc;
+    }
+  </script>
+</body>
+
+</html>

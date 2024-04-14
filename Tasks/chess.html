@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bala"></div>
+    <style>
+        .cell {
+            height: 80px;
+            width: 80px;
+            border: 1px solid black;
+        }
+
+        .white {
+            background-color: white;
+        }
+
+        .black {
+            background-color: black;
+        }
+
+        table {
+            border-spacing: 0px;
+            border-collapse:collapse;
+            border: 5px solid blue;
+        }
+
+        .bala {
+            width: 1000px;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+
+        let row = prompt("enter the row you want")
+        let col = prompt("enter the col you want")
+        let center = document.createElement(".center")
+        let table = document.createElement("table")
+        for (i = 0; i < row; i++) {
+            let tr = document.createElement("tr")
+            for (j = 0; j < col; j++) {
+                let td = document.createElement("td")
+                if ((i + j) % 2 == 0) {
+                    td.setAttribute("class", "cell white")
+                    tr.appendChild(td)
+                }
+                else {
+                    td.setAttribute("class", "cell black")
+                    tr.appendChild(td)
+                }
+                table.appendChild(tr)
+            }
+        }
+        let bala = document.querySelector(".bala")
+        center.appendChild(table)
+        bala.appendChild(center)
+        table.style.borderSpacing = "2px"
+    </script>
+</body>
+
+</html>

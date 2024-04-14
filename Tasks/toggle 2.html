@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toggle Image</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button id="toggleButton">Toggle Image</button>
+  <img id="myImage" src="../image/book1.jpeg" alt="Image 1">
+  <script>
+  const toggleButton = document.getElementById('toggleButton');
+const myImage = document.getElementById('myImage');
+
+toggleButton.addEventListener('click', function() {
+  if (myImage.src.endswith('book1.jpg')) {
+    myImage.src = '/images/adh.webp';
+  } else {
+    myImage.src = '/images/book1.jpg';
+  }
+});
+</script>
+</body>
+</html>

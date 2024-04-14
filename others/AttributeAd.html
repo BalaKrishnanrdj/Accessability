@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attribute Selector Example</title>
+<style>
+a[title] {
+    font-weight: bold;
+}
+a[href^="http://"] {
+    color: blue;
+}
+a[target="_blank"] {
+    text-decoration: underline;
+}
+li[data-category="special"] {
+    color: red;
+}
+</style>
+</head>
+<body>
+
+<!-- Example HTML with a link having a 'title' attribute -->
+<a href="#" title="This is a special link">Special Link</a>
+
+<!-- Example HTML with a link to an external site -->
+<a href="http://example.com">External Link</a>
+
+<!-- Example HTML with a link that opens in a new tab -->
+<a href="#" target="_blank">Link that opens in a new tab</a>
+
+<ul>
+    <li data-category="normal">Normal Item</li>
+    <li data-category="special">Special Item</li>
+    <li data-category="normal">Another Normal Item</li>
+</ul>
+
+</body>
+</html>

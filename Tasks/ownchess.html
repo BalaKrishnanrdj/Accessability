@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .cell{
+      height: 80px;
+      width: 80px;
+    }
+    .blackcell{
+      background-color: black;
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <div class="chess"></div>
+  <script>
+    var chess= document.querySelector(".chess")
+    var center= document.createElement("center")
+    var table=document.createElement("table")
+    for(i=0;i<8;i++){
+    let tr=document.createElement("tr")
+    for(j=0;j<8;j++){
+    let td=document.createElement("td")
+      if((i+j)%2==0){
+        td.setAttribute("class","blackcell cell")
+        tr.appendChild(td)
+      }
+      else{
+        td.setAttribute("class","whitecell cell")
+        tr.appendChild(td)
+      }
+    }
+    table.appendChild(tr)
+    }
+    center.appendChild(table)
+    chess.appendChild(center)
+    table.style.borderSpacing = "2px"
+    table.style.border = "2px solid black"
+    td.style.border="2px solid black" 
+
+  </script>
+  
+</body>
+</html>

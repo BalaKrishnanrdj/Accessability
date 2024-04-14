@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pseudo-element with Inline Element Example</title>
+<style>
+  /* Styling the ::before pseudo-element */
+  span::before {
+    content: ">> ";
+    color: red;
+    height: 100px;
+    width: 100px;
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<!-- Inline span element -->
+<p>This is an <span>inline</span> element.</p>
+
+</body>
+</html>

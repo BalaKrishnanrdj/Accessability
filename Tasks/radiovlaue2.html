@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radio</title>
+</head>
+
+<body>
+  <form id="myForm">
+    <input type="radio" name="gender" value="male"> Male<br>
+    <input type="radio" name="gender" value="female"> Female<br>
+    <input type="radio" name="gender" value="other"> Other<br>
+    <button type="button" onclick="getRadioValue()">Get Value</button>
+  </form>
+
+  <h1 style="font-variant: small-caps;" id="result"></h1>
+  <script>
+    function getRadioValue() {
+
+      var selectedRadioButton = document.querySelector("input[name='gender']:checked");
+      var result = document.getElementById("result");
+
+      // Check if a radio button is selected
+      if (selectedRadioButton) {
+        // Get the value of the selected radio button
+        var selectedValue = selectedRadioButton.value;
+
+        // Display the selected value (or do something else with it)
+        result.textContent = selectedValue;
+      } else {
+        // If no radio button is selected, display an error message or handle it accordingly
+        result.textContent = "Please select a gender.";
+      }
+    }
+
+  </script>
+</body>
+
+</html>

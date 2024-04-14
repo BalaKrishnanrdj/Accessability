@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perspective and Transform-style</title>
+<style>
+    .container {
+        perspective: 1000px; /* Set the perspective */
+    }
+    .parent {
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+        transform-style: preserve-3d;
+         /* Preserve 3D transformation */
+        transform: rotateY(45deg); /* Apply a 3D rotation */
+    }
+    .child {
+        width: 100px;
+        height: 100px;
+        background-color: #f00;
+        transform: rotateY(45deg); /* Apply a 3D rotation */
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</div>
+
+</body>
+</html>

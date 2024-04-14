@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyboard Accessibility</title>
+</head>
+<body>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" tabindex="1" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" tabindex="2" required>
+    <br>
+    <label for="age">Age:</label>
+    <input type="number" id="age" tabindex="3" required>
+    <br>
+    <button type="button" id="submitButton" tabindex="4">Submit</button>
+  </form>
+
+  <script>
+    function handleSubmit() {
+      alert("Form submitted!");
+    }
+
+    function handleKeyDown(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        
+        if (document.activeElement === document.getElementById("submitButton")) {
+          handleSubmit();
+        } else {
+          event.target.nextElementSibling.focus();
+        }
+      }
+      
+      // Check if Tab key is pressed
+      if (event.key === "Tab") {
+        event.preventDefault();
+        
+        if (event.shiftKey) {
+          event.target.previousElementSibling.focus();
+        } else {
+          event.target.nextElementSibling.focus();
+        }
+      }
+    }
+
+    // Add keydown event listeners to form elements
+    document.querySelectorAll('input, button').forEach(element => {
+      element.addEventListener('keydown', handleKeyDown);
+    });
+  </script>
+</body>
+</html>

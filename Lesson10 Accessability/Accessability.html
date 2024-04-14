@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Accessability </title>
+</head>
+<body>
+  <button aria-label="Submit">Submit</button> <br>
+
+  <label id="username-label">Username:</label> <br>
+  <input type="text" id="username" aria-labelledby="username-label"><br>
+
+  <input type="password" aria-describedby="password-description"> <br>
+  <div id="password-description">Password must be at least 8 characters long.</div> <br>
+
+  <button aria-expanded="false" aria-controls="menu">Toggle Menu</button> <br>
+  <ul id="menu" hidden>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <div aria-live="polite" id="status-message"></div>
+  <div aria-live="polite" id="status-message"></div> <br>
+
+  <div aria-hidden="true">Decorative image</div> <br>
+
+  <img src="image.jpg" alt="Description of the image">
+  Image with Alt Attribute
+
+  <video controls>
+    <source src="video.mp4" type="video/mp4">
+    <track src="captions.vtt" kind="captions" srclang="en" label="English captions">
+    Video with Caption
+  </video>
+
+  <audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    <track src="transcript.vtt" kind="subtitles" srclang="en" label="Transcript">
+    Audio with Transcript
+  </audio>
+  
+  
+
+</body>
+</html>

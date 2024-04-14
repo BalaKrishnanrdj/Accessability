@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task</title>
+  <style>
+    * {
+      color: black;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      height: 80px;
+      text-align: center;
+      padding: 10px 0 0 0;
+      margin: 0px;
+      background-color: cornflowerblue;
+      border: 1px solid black;
+    }
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+
+    .box1 {
+      display: flex;
+      justify-content: space-around;
+      overflow: auto;
+    }
+    .nav {
+      flex-basis: 32%;
+      overflow: auto;
+      flex-grow: 1;
+    }
+
+    .container {
+      flex-basis: 32%;
+      flex-grow: 1;
+      position: relative;
+      overflow: auto;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+
+    .border {
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+    }
+    .container .h4 {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid black;
+    }
+
+    .container3 .para {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    section {
+      position: sticky;
+      top: 0px;
+      left: 0px;
+      overflow: auto;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <header>
+      <h1>This is a Banner</h1>
+    </header>
+    <header>
+      <h1>This is a TopBar</h1>
+    </header>
+    <div class="box1">
+      <div class="container container1">
+        <section>
+          <h4 class="h4">Nav Header</h4>
+        </section>
+        <div class="nav">
+          <h4 class="h4">Home</h4>
+          <h4 class="h4">About</h4>
+          <h4 class="h4">Posts</h4>
+          <h4 class="h4">Author</h4>
+          <h4 class="h4">Comments</h4>
+          <h4 class="h4">Home</h4>
+          <h4 class="h4">About</h4>
+          <h4 class="h4">Posts</h4>
+          <h4 class="h4">Author</h4>
+          <h4 class="h4">Comments</h4>
+          <h4 class="h4">About</h4>
+          <h4 class="h4">Posts</h4>
+          <h4 class="h4">Author</h4>
+          <h4 class="h4">Comments</h4>
+          <h4 class="h4">About</h4>
+          <h4 class="h4">Posts</h4>
+          <h4 class="h4">Author</h4>
+          <h4 class="h4">Comments</h4>
+        </div>
+      </div>
+      <div class="container container2 border">
+        <section>
+          <h4 class="h4">Nav Header</h4>
+        </section>
+        <div class="nav">
+          <h4 class="h4">post1</h4>
+          <h4 class="h4">post2</h4>
+          <h4 class="h4">post3</h4>
+          <h4 class="h4">post4</h4>
+          <h4 class="h4">post5</h4>
+          <h4 class="h4">post6</h4>
+          <h4 class="h4">post8</h4>
+          <h4 class="h4">post9</h4>
+          <h4 class="h4">post10</h4>
+          <h4 class="h4">post10</h4>
+          <h4 class="h4">post10</h4>
+          <h4 class="h4">post10</h4>
+          <h4 class="h4">post10</h4>
+          <h4 class="h4">post10</h4>
+          <h4 class="h4">post10</h4>
+          <h4 class="h4">post10</h4>
+          <h4 class="h4">post10</h4>
+          <h4 class="h4">post10</h4>
+          <h4 class="h4">post10</h4>
+          <h4 class="h4">post10</h4>
+          <h4 class="h4">post10</h4>
+        </div>
+      </div>
+      <div class="container container3">
+
+        <section>
+          <h4 class="h4">Nav Header</h4>
+        </section>
+        <div class="nav">
+          <p class="para">This is a post details:</p>
+          <p class="para">This is a post details Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, non,
+            vitae ullam illo quibusdam blanditiis at labore nesciunt magni dolores qui, illum molestias ipsa sint cum
+            mollitia eius accusantium et?</p>
+          <p class="para">This is a post details:</p>
+          <p class="para">This is a post details Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, non,
+            vitae ullam illo quibusdam blanditiis at labore nesciunt magni dolores qui, illum molestias ipsa sint cum
+            mollitia eius accusantium et?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Show Car Names</title>
+<style>/* Style for navigation */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Style for car list */
+  #carList {
+    display: none; /* Initially hide car list */
+  }
+  
+  #carList ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li id="option1">Option 1</li>
+      <li id="option2">Option 2</li>
+    </ul>
+  </nav>
+  <div id="carList">
+    <ul>
+      <!-- Car names will be dynamically added here -->
+    </ul>
+  </div>
+  <script>
+  document.getElementById('option1').addEventListener('click', function() {
+    showCarNames(['Toyota', 'Honda', 'Ford']);
+  });
+  
+  document.getElementById('option2').addEventListener('click', function() {
+    showCarNames(['BMW', 'Mercedes', 'Audi']);
+  });
+  
+  function showCarNames(cars) {
+    var carList = document.getElementById('carList');
+    var carListItems = carList.querySelector('ul');
+  
+    carListItems.innerHTML = '';
+  
+    cars.forEach(function(car) {
+      var li = document.createElement('li');
+      li.textContent = car;
+      carListItems.appendChild(li);
+    });
+  
+    // Display the car list
+    carList.style.display = 'block';
+  }
+  </script>
+</body>
+</html>

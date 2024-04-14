@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>perspective</title>
+  <style>
+     body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .grandparent{
+      perspective: 100px;
+    }
+    .parent{
+      width: 100px;
+      border: 2px solid black;
+      margin: 40px;
+      transform-style: preserve-3d;
+    }
+    .child{
+      width: 55px;
+      height: 55px;
+      background-color: cornflowerblue;
+      display: inline-block;
+      margin: 5px;
+      transform:rotateY(45deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="grandparent">
+    <div class="parent">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+  </div>
+  
+</body>
+</html>

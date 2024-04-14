@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: green;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px; 
+            height: 200px;
+            box-sizing: border-box ;
+        }
+        .box2, .box3{
+            display: inline-block;
+        }
+        .box2{
+            width: 200px;
+        }
+        .box3{
+            width: 300px;
+        }
+        .boz{
+            height:100px;
+            width: 200px;
+            background-color: yellowgreen ;
+            padding: 20px;
+            border: 1px solid black;
+            display: inline-block;
+            position: relative;
+        }
+        .box22{
+            top: 20px;
+            left: 20px;
+        }
+        .rela{
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            top: -15px;
+            left: -15px;
+            padding: 10px;
+            color:  red;
+            background-color: yellow;
+            line-height: 30px;
+            border-radius: 50%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">Box1</div>
+    <div class="box box2">Box2</div>
+    <div class="box box3">Box3</div>
+    <br>
+    <div class="boz">1</div>
+    <div class="boz box22">2</div>
+    <div class="boz box22">2</div>
+    <div class="boz">3 <div class="boz rela">3.5</div></div>
+    <div class="boz">4</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Value</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other<br>
+        <button type="button" onclick="getRadioValue()">Get Value</button>
+      </form>
+      <h1 id="result"></h1>
+ <script>
+    function getRadioValue() {
+ 
+  var radioButtons = document.querySelectorAll('input[name="gender"]');
+  var result = document.getElementById("result")
+  
+  // Initialize a variable to store the selected value
+  var selectedValue = null;
+  
+  // Loop through each radio button
+  radioButtons.forEach(function(radioButton) {
+    // Check if the radio button is checked
+    if (radioButton.checked) {
+      // If checked, assign its value to the selectedValue variable
+      selectedValue = radioButton.value;
+    }
+  });
+  
+  // Display the selected value (or do something else with it)
+  result.textContent =selectedValue;
+}
+
+ </script>      
+</body>
+</html>
